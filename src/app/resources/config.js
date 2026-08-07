@@ -1,4 +1,4 @@
-const baseURL = "https://jason-healthcare.vercel.app";
+const baseURL = "tyler-salva.vercel.app";
 
 const routes = {
   "/": true,
@@ -15,11 +15,11 @@ const protectedRoutes = {
 };
 
 const style = {
-  theme: "dark",
+  theme: "light",       // Bright, clean healthcare look
   neutral: "slate",
-  brand: "neutral",     // Changed from 'blue' to 'neutral' for black theme
-  accent: "zinc",       // Changed from 'cyan' to 'zinc' for monochromatic look
-  solid: "contrast",    // Changed from 'color' to 'contrast' for black emphasis
+  brand: "cyan",        // Medical blue
+  accent: "emerald",    // Health green
+  solid: "color",
   solidStyle: "flat",
   border: "playful",
   surface: "translucent",
@@ -40,15 +40,15 @@ const effects = {
     width: 100,
     height: 100,
     tilt: 0,
-    colorStart: "neutral-background-strong",  // Changed from brand to neutral
+    colorStart: "brand-background-medium",
     colorEnd: "static-transparent",
-    opacity: 70,
+    opacity: 60,
   },
   dots: {
     display: true,
     size: 2,
-    color: "neutral-on-background-weak",  // Changed from brand to neutral
-    opacity: 20,
+    color: "brand-on-background-weak",
+    opacity: 30,
   },
   lines: {
     display: false,

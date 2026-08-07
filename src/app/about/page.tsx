@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Avatar,
   Button,
@@ -7,6 +8,7 @@ import {
   Icon,
   IconButton,
   SmartImage,
+  SmartLink,
   Tag,
   Text,
 } from "@/once-ui/components";
@@ -178,10 +180,9 @@ export default function About() {
                 {social.map(
                   (item) =>
                     item.link && (
-                        <>
+                        <React.Fragment key={item.name}>
                             <Button
                                 className="s-flex-hide"
-                                key={item.name}
                                 href={item.link}
                                 prefixIcon={item.icon}
                                 label={item.name}
@@ -191,12 +192,11 @@ export default function About() {
                             <IconButton
                                 className="s-flex-show"
                                 size="l"
-                                key={`${item.name}-icon`}
                                 href={item.link}
                                 icon={item.icon}
                                 variant="secondary"
                             />
-                        </>
+                        </React.Fragment>
                     ),
                 )}
               </Flex>
@@ -217,10 +217,30 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
+                    <Flex fillWidth horizontal="space-between" vertical="end" gap="8" wrap marginBottom="4">
+                      {experience.link ? (
+                        <SmartLink href={experience.link}>
+                          <Flex gap="8" vertical="center">
+                            {experience.logo && (
+                              <img
+                                src={experience.logo}
+                                alt={`${experience.company} logo`}
+                                width={24}
+                                height={24}
+                                style={{ borderRadius: "6px", display: "block" }}
+                              />
+                            )}
+                            <Text id={experience.company} variant="heading-strong-l">
+                              {experience.company}
+                            </Text>
+                            <Icon name="arrowUpRightFromSquare" size="xs" onBackground="neutral-weak" />
+                          </Flex>
+                        </SmartLink>
+                      ) : (
+                        <Text id={experience.company} variant="heading-strong-l">
+                          {experience.company}
+                        </Text>
+                      )}
                       <Text variant="heading-default-xs" onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
@@ -239,6 +259,21 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
+                    {experience.links && experience.links.length > 0 && (
+                      <Flex fillWidth wrap gap="8" paddingTop="16">
+                        {experience.links.map((projectLink, linkIndex) => (
+                          <Button
+                            key={`${experience.company}-link-${linkIndex}`}
+                            href={projectLink.url}
+                            label={projectLink.label}
+                            size="s"
+                            variant="secondary"
+                            prefixIcon={projectLink.icon}
+                            suffixIcon="arrowUpRightFromSquare"
+                          />
+                        ))}
+                      </Flex>
+                    )}
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
                         {experience.images.map((image, index) => (

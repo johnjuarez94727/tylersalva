@@ -1,14 +1,14 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Jason",
-  lastName: "Webster",
+  firstName: "Tyler",
+  lastName: "Salva",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "EHR Integration Analyst",
+  role: "Senior Software Engineer",
   avatar: "/images/avatar.jpg",
-  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
   };
 
@@ -27,7 +27,7 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/jason-webster-ab3814116",
+    link: "https://linkedin.com/in/tyler-s-4a9281140/",
   },
   {
     name: "X",
@@ -37,21 +37,28 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:thejasonwebster@gmail.com",
+    link: "mailto:tylersalva9466@gmail.com",
   },
 ];
 
 const home = {
   display: false,
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my experience as a ${person.role}`,
-  headline: <>EHR Integration Analyst</>,
+  title: `${person.name} — ${person.role}`,
+  description: `Portfolio website showcasing my work as a ${person.role}`,
+  tagline: "Senior Software Engineer",
+  headline: <>I build AI-powered healthcare platforms that scale.</>,
   subline: (
     <>
-     I'm Jason, an <InlineCode>EHR Integration Analyst</InlineCode>. I'm passionate about leveraging technology to create innovative solutions that improve lives. 
+     I'm Tyler, a <InlineCode>Senior Software Engineer</InlineCode> with 9+ years turning large-scale clinical data into secure, high-performance products, from LLM-driven clinical intelligence to FHIR interoperability, used by hospitals, providers, and millions of patients.
      </>
   ),
+  stats: [
+    { value: "9+", label: "Years of experience" },
+    { value: "130M+", label: "Patients impacted" },
+    { value: "70%", label: "Faster equipment delivery" },
+    { value: "Gold", label: "Stevie Award, Tech" },
+  ],
 };
 
 const about = {
@@ -63,21 +70,23 @@ const about = {
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
     display: true,
-    link: "https://calendly.com/thejasonwebster",
+    link: "https://calendly.com/tylersalva9466/30min",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-      I am a healthcare IT professional with a strong background in laboratory operations
-      and EHR integrations. I excel at bridging the gap between technology and healthcare operations. 
-      I am skilled at navigating HL7 and XML within Epic interfaces to resolve complex issues. 
-      I bring technical expertise and analytical problem-solving to drive efficiency in healthcare environments.
+      Tyler Salva is a Senior Software Engineer with 9+ years of experience building AI-powered
+      healthcare platforms, scalable cloud applications, and distributed backend systems. He works
+      across the full stack with Python, Java, React, and AWS to develop secure, high-performance
+      products used by hospitals, healthcare providers, and millions of patients. His background
+      spans LLM applications, NLP, healthcare interoperability (FHIR), and designing reliable
+      systems that process large-scale clinical data while meeting HIPAA compliance.
       </>
     ),
   },
@@ -86,62 +95,89 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Exact Sciences",
-        timeframe: "2022 - Present",
-        role: "EHR Integration Analyst",
+        company: "Truveta",
+        timeframe: "2024 - Present",
+        role: "Senior Software Engineer",
+        link: "https://www.truveta.com/",
+        logo: "https://www.google.com/s2/favicons?domain=truveta.com&sz=64",
+        links: [
+          { label: "Truveta Intelligence", url: "https://www.truveta.com/intelligence", icon: "sparkles" },
+        ],
         achievements: [
           <>
-            Played a key role in validating and testing new integrations, contributing to the successful deployment of multiple system upgrades while maintaining compliance with patient privacy and security standards.
+            Led engineering for Truveta Intelligence, building a natural language query engine to analyze billions of live clinical data points with sub-minute query response times.
           </>,
           <>
-            Successfully onboarded and integrated healthcare partners into the AURA network, streamlining result delivery and improving patient care coordination while ensuring HIPAA compliance and data security.
+            Architected distributed data pipelines handling multi-modal EHR data for over 130M patients, and deployed Truveta Language Model (TLM) upgrades that parsed unstructured clinical notes to extract 2.7M oncology staging records.
+          </>,
+          <>
+            Re-engineered legacy static pipelines into a governance-driven multi-agent AI system for zero-shot clinical ontology alignment, achieving human-expert accuracy on complex diagnosis and medication classifications, earning the Gold Stevie Award for Tech Achievement.
           </>,
         ],
         images: []
       },
       {
-        company: "Emory University",
-        timeframe: "2022 - Present",
-        role: "Histotechnologist PRN - Part-Time",
+        company: "Tomorrow Health",
+        timeframe: "2022 - 2024",
+        role: "Senior Software Engineer",
+        link: "https://home.tomorrowhealth.com",
+        logo: "https://www.google.com/s2/favicons?domain=tomorrowhealth.com&sz=64",
+        links: [
+          { label: "AI Ordering", url: "https://home.tomorrowhealth.com/ai-ordering", icon: "sparkles" },
+          { label: "AI Fax Intake", url: "https://home.tomorrowhealth.com/ai-fax-intake", icon: "sparkles" },
+        ],
         achievements: [
           <>
-            Successfully prepared and processed high-quality tissue samples for diagnostic and research purposes, ensuring accuracy and adherence to strict laboratory protocols.
+            Led full-stack development of cloud-native web apps using Python (Django/FastAPI) and React, scaling backend systems to safely process millions of patient healthcare transactions.
           </>,
           <>
-            Collaborated with pathologists and laboratory teams to prioritize workloads, maintain efficient workflows, and deliver timely results, supporting critical patient care decisions.
+            Built integration pipelines on FHIR R4 and SMART on FHIR so external hospital EHR networks could connect seamlessly, and implemented NLP/OCR workflows to automate data extraction from incoming clinical faxes and notes.
+          </>,
+          <>
+            Engineered high-accuracy mapping tools that cross-referenced unstructured doctor notes with complex insurance rules, speeding up medical equipment delivery by 70%, on HIPAA-compliant AWS storage with end-to-end encryption and immutable logging.
           </>,
         ],
         images: []
       },
       {
-        company: "U.S. Department of Veterans Affairs",
-        timeframe: "2019 - 2022",
-        role: "Histotechnologist",
+        company: "Twin Health",
+        timeframe: "2020 - 2022",
+        role: "Software Engineer II",
+        link: "https://usa.twinhealth.com/",
+        logo: "https://www.google.com/s2/favicons?domain=twinhealth.com&sz=64",
+        links: [
+          { label: "iOS App", url: "https://apps.apple.com/us/app/twin-health/id1456423142", icon: "apple" },
+          { label: "Android App", url: "https://play.google.com/store/apps/details?hl=en_US&id=com.twinsdigital.v2", icon: "googlePlay" },
+        ],
         achievements: [
           <>
-            Processed and prepared tissue specimens for microscopic examination, ensuring high-quality 
-            slides for accurate pathological diagnosis.
-          </>,       
+            Built and optimized the patient-facing Whole Body Digital Twin mobile app in React Native for meal logging, habit tracking, and real-time metabolic updates to help reverse Type 2 diabetes.
+          </>,
           <>
-            Implemented and followed strict safety protocols while handling biological specimens and 
-            hazardous materials in accordance with federal regulations.
+            Developed secure background pipelines that synced live readings from continuous glucose monitors (CGMs) and smartwatches to the cloud via Bluetooth Low Energy (BLE) and health APIs.
+          </>,
+          <>
+            Scaled backend microservices with Java (Spring Boot) and Python to process millions of daily data points per user, and connected the app to core AI models for personalized nutrition tips and behavioral nudges, all under strict HIPAA compliance in PostgreSQL and AWS.
           </>
         ],
         images: []
       },
       {
-        company: "Bako Diagnostics",
-        timeframe: "2017 - 2019",
-        role: "Laboratory Assistant",
+        company: "Uber Health",
+        timeframe: "2017 - 2020",
+        role: "Software Engineer I",
+        link: "https://www.uberhealth.com",
+        logo: "https://www.google.com/s2/favicons?domain=uberhealth.com&sz=64",
+        links: [],
         achievements: [
           <>
-            Managed specimen collection, processing, and documentation while maintaining strict adherence to CLIA and CAP regulations, ensuring accurate patient sample handling and tracking.
+            Wrote microservices in Go and Python to support the Uber Health API launch, and helped maintain HIPAA-compliant data pipelines that separated patient privacy details from operational ride data.
           </>,
           <>
-            Utilized and maintained proficiency in EHR systems (VistaCPRS, Assist) for accurate patient data management and specimen tracking.
+            Supported the team with testing, bug fixes, and backend updates using Kafka and Cassandra to keep trip tracking reliable.
           </>,
           <>
-            Contributed to quality assurance by monitoring processes, calibrating equipment, and maintaining detailed SOPs and Chain of Custody documentation.
+            As an intern during the early beta, aided the full-stack team by writing dashboard features and testing SMS notification setups.
           </>
         ],
         images: []
@@ -150,23 +186,11 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies & Certs",
+    title: "Education",
     institutions: [
       {
-        name: "Harrisburg University of Science and Technology",
-        description: <>Master of Science - MS, Healthcare Informatics</>,
-      },
-      {
-        name: "Valdosta State University",
-        description: <>Bachelor's Degree, Biology</>,
-      },
-      {
-        name: "Epic",
-        description: <>Bridges Certification</>,
-      },
-      {
-        name: "Rhapsody",
-        description: <>Level 1: Corepoint Integration Engine</>,
+        name: "California Institute of Technology",
+        description: <>Bachelor of Science, Computer Science</>,
       },
     ],
   },
@@ -175,24 +199,46 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Healthcare Integration Technologies",
-        description: <>Expertise in HL7 interfaces, Epic Bridges integration engine, and Corepoint Integration Engine for seamless healthcare data exchange and system interoperability.</>,
-        images: [{}],
+        title: "AI & Machine Learning",
+        icon: "brain",
+        summary: "LLMs, NLP & Agentic AI",
+        description: <>LLM applications, NLP, and Agentic AI with RAG, prompt engineering, LangChain, and Hugging Face. Experienced in OCR, semantic and vector search, and clinical AI for large-scale healthcare data.</>,
+        images: [],
       },
       {
-        title: "Healthcare Analytics",
-        description: <>Proficient in Tableau for healthcare data visualization and analytics, combined with strong medical terminology knowledge for accurate data interpretation and reporting.</>,
-        images: [{}],
+        title: "Full-Stack Development",
+        icon: "layers",
+        summary: "React & Python/Java APIs",
+        description: <>Frontend with React, React Native, Next.js, Vue.js, and Angular. Backend with FastAPI, Django, Spring Boot, Node.js, NestJS, Express.js, ASP.NET, GraphQL, and REST APIs.</>,
+        images: [],
       },
       {
-        title: "Healthcare Systems & Tools",
-        description: <>Experienced with Epic Bridges, Beaker, and Vista CPRS. Proficient in laboratory report printing, data collection, and system migration.</>,
-        images: [{}],
+        title: "Languages",
+        icon: "code",
+        summary: "Python, TypeScript, Go, Java",
+        description: <>Python, JavaScript, TypeScript, Go, Java, C#, and SQL.</>,
+        images: [],
       },
       {
-        title: "Project & Documentation Tools",
-        description: <>Skilled in Microsoft Suite, Jira, and Confluence for project planning, coordination, and documentation. Strong focus on customer support and stakeholder communication.</>,
-        images: [{}],
+        title: "Cloud & DevOps",
+        icon: "cloud",
+        summary: "AWS, Docker & Kubernetes",
+        description: <>AWS, Docker, Kubernetes, Terraform, GitHub Actions, and CI/CD on Linux. Focused on secure, HIPAA-compliant, high-availability infrastructure.</>,
+        images: [],
+      },
+      {
+        title: "Databases & Data",
+        icon: "database",
+        summary: "SQL, NoSQL & vector stores",
+        description: <>PostgreSQL, Microsoft SQL Server, MySQL, MongoDB, and Redis, plus vector stores like Pinecone and pgvector. Skilled in healthcare interoperability with FHIR R4 and SMART on FHIR.</>,
+        images: [],
+      },
+      {
+        title: "Engineering Practices",
+        icon: "gears",
+        summary: "System design & API design",
+        description: <>System design, API design, and OAuth 2.0 security, delivered in Agile/Scrum teams using Git, Jira, and Slack.</>,
+        images: [],
       }
     ]
   },
