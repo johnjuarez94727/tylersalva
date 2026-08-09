@@ -2,7 +2,7 @@ const baseURL = "tyler-salva.vercel.app";
 
 const routes = {
   "/": true,
-  "/about": true,
+  "/about": false, // Merged into the home page
   "/work": false,  // Changed to false to hide Personal Projects
   "/blog": false,  // Changed to false to hide Blog
   "/gallery": true,

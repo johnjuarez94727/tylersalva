@@ -90,9 +90,18 @@ export default function Home() {
           <Badge title="Gold Stevie Award · Tech Achievement" icon="checkCircle" arrow={false} />
         </RevealFx>
         <RevealFx translateY="4" delay={0.1} horizontal="center">
-          <Text variant="label-strong-l" onBackground="neutral-weak" align="center">
-            {person.name} · {home.tagline}
-          </Text>
+          <Column horizontal="center" gap="8">
+            <Heading variant="display-strong-m" align="center">
+              {person.name}
+            </Heading>
+            <Text
+              variant="heading-default-m"
+              onBackground="brand-medium"
+              align="center"
+            >
+              {home.tagline}
+            </Text>
+          </Column>
         </RevealFx>
         <RevealFx translateY="8" delay={0.2} horizontal="center">
           <Column maxWidth="m" horizontal="center">
@@ -115,14 +124,27 @@ export default function Home() {
         </RevealFx>
         <RevealFx translateY="16" delay={0.4} horizontal="center" paddingTop="m">
           <Flex gap="12" wrap horizontal="center">
-            <Button id="hero-about" href="/about" variant="primary" size="l" arrowIcon>
+            <Button id="hero-about" href="#experience" variant="primary" size="l" arrowIcon>
               View my experience
             </Button>
+            {person.resume && (
+              <Button
+                href={person.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                prefixIcon="clipboard"
+                suffixIcon="arrowUpRightFromSquare"
+                variant="secondary"
+                size="l"
+              >
+                Resume
+              </Button>
+            )}
             {linkedIn && (
               <Button
                 href={linkedIn.link}
                 prefixIcon="linkedin"
-                variant="secondary"
+                variant="tertiary"
                 size="l"
               >
                 LinkedIn
@@ -182,33 +204,37 @@ export default function Home() {
             {about.technical.skills.map((skill, index) => (
               <Card
                 key={index}
-                direction="row"
+                direction="column"
                 fillWidth
-                vertical="center"
+                fillHeight
                 gap="12"
-                padding="m"
+                padding="l"
                 radius="l"
               >
-                {skill.icon && (
-                  <Flex
-                    horizontal="center"
-                    vertical="center"
-                    minWidth="40"
-                    minHeight="40"
-                    radius="m"
-                    background="brand-alpha-weak"
-                  >
-                    <Icon name={skill.icon} size="s" onBackground="brand-medium" />
+                <Flex gap="12" vertical="center">
+                  {skill.icon && (
+                    <Flex
+                      horizontal="center"
+                      vertical="center"
+                      minWidth="40"
+                      minHeight="40"
+                      radius="m"
+                      background="brand-alpha-weak"
+                    >
+                      <Icon name={skill.icon} size="s" onBackground="brand-medium" />
+                    </Flex>
+                  )}
+                  <Text variant="heading-strong-m">{skill.title}</Text>
+                </Flex>
+                {skill.tags && skill.tags.length > 0 && (
+                  <Flex fillWidth wrap gap="8">
+                    {skill.tags.map((tag, tagIndex) => (
+                      <Tag key={`${skill.title}-tag-${tagIndex}`} size="s">
+                        {tag}
+                      </Tag>
+                    ))}
                   </Flex>
                 )}
-                <Column gap="2">
-                  <Text variant="heading-strong-s">{skill.title}</Text>
-                  {skill.summary && (
-                    <Text variant="body-default-s" onBackground="neutral-weak">
-                      {skill.summary}
-                    </Text>
-                  )}
-                </Column>
               </Card>
             ))}
           </Grid>
@@ -270,7 +296,7 @@ export default function Home() {
 
       {/* Experience highlights */}
       {about.work.display && (
-        <Column fillWidth gap="l" paddingTop="l">
+        <Column id="experience" fillWidth gap="l" paddingTop="l">
           <Column fillWidth horizontal="center" gap="8">
             <Tag size="l" prefixIcon="person">
               Experience
@@ -307,8 +333,17 @@ export default function Home() {
                   <Tag size="m">{experience.timeframe}</Tag>
                 </Flex>
                 <Text variant="body-default-s" onBackground="neutral-weak">
-                  {experience.achievements[0]}
+                  {experience.summary || experience.achievements[0]}
                 </Text>
+                {experience.tags && experience.tags.length > 0 && (
+                  <Flex fillWidth wrap gap="8">
+                    {experience.tags.map((tag, tagIndex) => (
+                      <Tag key={tagIndex} size="s">
+                        {tag}
+                      </Tag>
+                    ))}
+                  </Flex>
+                )}
                 {(experience.link ||
                   (experience.links && experience.links.length > 0)) && (
                   <Flex fillWidth wrap gap="8" paddingTop="4">
@@ -349,11 +384,51 @@ export default function Home() {
               </Card>
             ))}
           </Column>
-          <Flex fillWidth horizontal="center" paddingTop="s">
-            <Button id="exp-about" href="/about" variant="secondary" size="m" arrowIcon>
-              See full background
-            </Button>
-          </Flex>
+        </Column>
+      )}
+
+      {/* Education */}
+      {about.studies.display && about.studies.institutions.length > 0 && (
+        <Column fillWidth gap="l" paddingTop="l">
+          <Column fillWidth horizontal="center" gap="8">
+            <Tag size="l" prefixIcon="book">
+              Education
+            </Tag>
+            <Heading as="h2" variant="display-strong-s" align="center" wrap="balance">
+              Where I studied
+            </Heading>
+          </Column>
+          <Column fillWidth gap="12">
+            {about.studies.institutions.map((institution, index) => (
+              <Card
+                key={index}
+                fillWidth
+                padding="l"
+                radius="l"
+                direction="row"
+                vertical="center"
+                gap="16"
+              >
+                {institution.logo && (
+                  <img
+                    src={institution.logo}
+                    alt={`${institution.name} logo`}
+                    width={40}
+                    height={40}
+                    style={{ borderRadius: "8px", display: "block" }}
+                  />
+                )}
+                <Column gap="4">
+                  <Heading as="h3" variant="heading-strong-m">
+                    {institution.name}
+                  </Heading>
+                  <Text variant="body-default-m" onBackground="neutral-weak">
+                    {institution.description}
+                  </Text>
+                </Column>
+              </Card>
+            ))}
+          </Column>
         </Column>
       )}
 
@@ -392,6 +467,19 @@ export default function Home() {
                 size="l"
               >
                 Connect on LinkedIn
+              </Button>
+            )}
+            {person.resume && (
+              <Button
+                href={person.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                prefixIcon="clipboard"
+                suffixIcon="arrowUpRightFromSquare"
+                variant="tertiary"
+                size="l"
+              >
+                View resume
               </Button>
             )}
           </Flex>

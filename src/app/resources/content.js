@@ -10,6 +10,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
+  resume: "https://drive.google.com/file/d/1uHum_CIUjlZXEnqUUVty95GtcbyC12_s/view",
   };
 
 const newsletter = {
@@ -100,6 +101,8 @@ const about = {
         role: "Senior Software Engineer",
         link: "https://www.truveta.com/",
         logo: "https://www.google.com/s2/favicons?domain=truveta.com&sz=64",
+        summary: <>Leading clinical AI and natural-language query systems over billions of real-world clinical data points for 130M+ patients.</>,
+        tags: ["Python", "LLMs", "NLP", "Agentic AI", "AWS"],
         links: [
           { label: "Truveta Intelligence", url: "https://www.truveta.com/intelligence", icon: "sparkles" },
         ],
@@ -122,6 +125,8 @@ const about = {
         role: "Senior Software Engineer",
         link: "https://home.tomorrowhealth.com",
         logo: "https://www.google.com/s2/favicons?domain=tomorrowhealth.com&sz=64",
+        summary: <>Built cloud-native, FHIR-based platforms and AI document workflows that automated home-healthcare ordering at scale.</>,
+        tags: ["Python", "Django", "FastAPI", "React", "FHIR", "NLP/OCR", "AWS"],
         links: [
           { label: "AI Ordering", url: "https://home.tomorrowhealth.com/ai-ordering", icon: "sparkles" },
           { label: "AI Fax Intake", url: "https://home.tomorrowhealth.com/ai-fax-intake", icon: "sparkles" },
@@ -145,6 +150,8 @@ const about = {
         role: "Software Engineer II",
         link: "https://usa.twinhealth.com/",
         logo: "https://www.google.com/s2/favicons?domain=twinhealth.com&sz=64",
+        summary: <>Shipped the patient mobile app and real-time device data pipelines for the Whole Body Digital Twin platform.</>,
+        tags: ["React Native", "Java", "Spring Boot", "Python", "PostgreSQL", "AWS"],
         links: [
           { label: "iOS App", url: "https://apps.apple.com/us/app/twin-health/id1456423142", icon: "apple" },
           { label: "Android App", url: "https://play.google.com/store/apps/details?hl=en_US&id=com.twinsdigital.v2", icon: "googlePlay" },
@@ -168,6 +175,8 @@ const about = {
         role: "Software Engineer I",
         link: "https://www.uberhealth.com",
         logo: "https://www.google.com/s2/favicons?domain=uberhealth.com&sz=64",
+        summary: <>Helped launch the Uber Health API with HIPAA-compliant microservices and reliable data pipelines.</>,
+        tags: ["Go", "Python", "Kafka", "Cassandra"],
         links: [],
         achievements: [
           <>
@@ -191,6 +200,7 @@ const about = {
       {
         name: "California Institute of Technology",
         description: <>Bachelor of Science, Computer Science</>,
+        logo: "https://www.google.com/s2/favicons?domain=caltech.edu&sz=64",
       },
     ],
   },
@@ -202,42 +212,42 @@ const about = {
         title: "AI & Machine Learning",
         icon: "brain",
         summary: "LLMs, NLP & Agentic AI",
-        description: <>LLM applications, NLP, and Agentic AI with RAG, prompt engineering, LangChain, and Hugging Face. Experienced in OCR, semantic and vector search, and clinical AI for large-scale healthcare data.</>,
+        tags: ["LLMs", "NLP", "Agentic AI", "RAG", "LangChain", "Hugging Face", "OCR", "Vector Search", "Clinical AI"],
         images: [],
       },
       {
         title: "Full-Stack Development",
         icon: "layers",
         summary: "React & Python/Java APIs",
-        description: <>Frontend with React, React Native, Next.js, Vue.js, and Angular. Backend with FastAPI, Django, Spring Boot, Node.js, NestJS, Express.js, ASP.NET, GraphQL, and REST APIs.</>,
+        tags: ["React", "React Native", "Next.js", "Vue.js", "Angular", "FastAPI", "Django", "Spring Boot", "Node.js", "NestJS", "GraphQL", "REST"],
         images: [],
       },
       {
         title: "Languages",
         icon: "code",
         summary: "Python, TypeScript, Go, Java",
-        description: <>Python, JavaScript, TypeScript, Go, Java, C#, and SQL.</>,
+        tags: ["Python", "JavaScript", "TypeScript", "Go", "Java", "C#", "SQL"],
         images: [],
       },
       {
         title: "Cloud & DevOps",
         icon: "cloud",
         summary: "AWS, Docker & Kubernetes",
-        description: <>AWS, Docker, Kubernetes, Terraform, GitHub Actions, and CI/CD on Linux. Focused on secure, HIPAA-compliant, high-availability infrastructure.</>,
+        tags: ["AWS", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "CI/CD", "Linux"],
         images: [],
       },
       {
         title: "Databases & Data",
         icon: "database",
         summary: "SQL, NoSQL & vector stores",
-        description: <>PostgreSQL, Microsoft SQL Server, MySQL, MongoDB, and Redis, plus vector stores like Pinecone and pgvector. Skilled in healthcare interoperability with FHIR R4 and SMART on FHIR.</>,
+        tags: ["PostgreSQL", "SQL Server", "MySQL", "MongoDB", "Redis", "Pinecone", "pgvector", "FHIR"],
         images: [],
       },
       {
         title: "Engineering Practices",
         icon: "gears",
         summary: "System design & API design",
-        description: <>System design, API design, and OAuth 2.0 security, delivered in Agile/Scrum teams using Git, Jira, and Slack.</>,
+        tags: ["System Design", "API Design", "OAuth 2.0", "Agile/Scrum", "Git", "Jira"],
         images: [],
       }
     ]
