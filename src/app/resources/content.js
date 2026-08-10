@@ -199,7 +199,7 @@ const about = {
     institutions: [
       {
         name: "California Institute of Technology",
-        description: <>Bachelor of Science, Computer Science</>,
+        description: <>Master of Science, Computer Science</>,
         logo: "https://www.google.com/s2/favicons?domain=caltech.edu&sz=64",
       },
     ],
