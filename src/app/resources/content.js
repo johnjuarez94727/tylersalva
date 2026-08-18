@@ -2,7 +2,7 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
   firstName: "Tyler",
-  lastName: "Salva",
+  lastName: "Spell",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
@@ -10,7 +10,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
-  resume: "https://drive.google.com/file/d/1uHum_CIUjlZXEnqUUVty95GtcbyC12_s/view",
+  resume: "https://drive.google.com/file/d/1ZYZ_aHd4MkK6Tw2dsJt6Ie-wyqcMHH9a/view",
   };
 
 const newsletter = {
@@ -38,7 +38,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:tylersalva9466@gmail.com",
+    link: "mailto:tylerspell9318@gmail.com",
   },
 ];
 
@@ -74,15 +74,15 @@ const about = {
     display: false,
   },
   calendar: {
-    display: true,
-    link: "https://calendly.com/tylersalva9466/30min",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-      Tyler Salva is a Senior Software Engineer with 9+ years of experience building AI-powered
+      Tyler Spell is a Senior Software Engineer with 9+ years of experience building AI-powered
       healthcare platforms, scalable cloud applications, and distributed backend systems. He works
       across the full stack with Python, Java, React, and AWS to develop secure, high-performance
       products used by hospitals, healthcare providers, and millions of patients. His background

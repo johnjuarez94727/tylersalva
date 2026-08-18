@@ -1,4 +1,4 @@
-const baseURL = "tyler-salva.vercel.app";
+const baseURL = "tyler-spell.vercel.app";
 
 const routes = {
   "/": true,

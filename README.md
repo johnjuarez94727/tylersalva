@@ -1,4 +1,4 @@
-# Tyler Salva - Portfolio
+# Tyler Spell - Portfolio
 
-Personal portfolio site for Tyler Salva, Senior Software Engineer.
+Personal portfolio site for Tyler Spell, Senior Software Engineer.
 
