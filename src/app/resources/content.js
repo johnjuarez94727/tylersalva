@@ -8,7 +8,7 @@ const person = {
   },
   role: "Senior Software Engineer",
   avatar: "/images/avatar.jpg",
-  location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/Los_Angeles", // Pacific Time (PST/PDT)
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
   resume: "https://drive.google.com/file/d/188UBoSaNEzAlobEWnWcX5WfCP9BoY6sE/view",
   };
