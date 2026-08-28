@@ -2,7 +2,7 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
   firstName: "Tyler",
-  lastName: "Spell",
+  lastName: "Saephan",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
@@ -10,7 +10,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
-  resume: "https://drive.google.com/file/d/1ZYZ_aHd4MkK6Tw2dsJt6Ie-wyqcMHH9a/view",
+  resume: "https://drive.google.com/file/d/188UBoSaNEzAlobEWnWcX5WfCP9BoY6sE/view",
   };
 
 const newsletter = {
@@ -38,7 +38,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:tylerspell9318@gmail.com",
+    link: "mailto:tylersaephan9558@gmail.com",
   },
 ];
 
@@ -82,7 +82,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-      Tyler Spell is a Senior Software Engineer with 9+ years of experience building AI-powered
+      Tyler Saephan is a Senior Software Engineer with 9+ years of experience building AI-powered
       healthcare platforms, scalable cloud applications, and distributed backend systems. He works
       across the full stack with Python, Java, React, and AWS to develop secure, high-performance
       products used by hospitals, healthcare providers, and millions of patients. His background
@@ -199,7 +199,7 @@ const about = {
     institutions: [
       {
         name: "California Institute of Technology",
-        description: <>Master of Science, Computer Science</>,
+        description: <>Bachelor of Science, Computer Science</>,
         logo: "https://www.google.com/s2/favicons?domain=caltech.edu&sz=64",
       },
     ],

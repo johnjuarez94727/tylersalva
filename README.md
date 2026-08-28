@@ -1,4 +1,3 @@
-# Tyler Spell - Portfolio
+# Tyler Saephan - Portfolio
 
-Personal portfolio site for Tyler Spell, Senior Software Engineer.
-
+Personal portfolio site for Tyler Saephan, Senior Software Engineer.
