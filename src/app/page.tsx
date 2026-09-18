@@ -127,19 +127,6 @@ export default function Home() {
             <Button id="hero-about" href="#experience" variant="primary" size="l" arrowIcon>
               View my experience
             </Button>
-            {person.resume && (
-              <Button
-                href={person.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                prefixIcon="clipboard"
-                suffixIcon="arrowUpRightFromSquare"
-                variant="secondary"
-                size="l"
-              >
-                Resume
-              </Button>
-            )}
             {linkedIn && (
               <Button
                 href={linkedIn.link}
@@ -467,19 +454,6 @@ export default function Home() {
                 size="l"
               >
                 Connect on LinkedIn
-              </Button>
-            )}
-            {person.resume && (
-              <Button
-                href={person.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                prefixIcon="clipboard"
-                suffixIcon="arrowUpRightFromSquare"
-                variant="tertiary"
-                size="l"
-              >
-                View resume
               </Button>
             )}
           </Flex>

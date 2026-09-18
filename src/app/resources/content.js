@@ -10,7 +10,6 @@ const person = {
   avatar: "/images/avatar.jpg",
   location: "America/Los_Angeles", // Pacific Time (PST/PDT)
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
-  resume: "https://drive.google.com/file/d/188UBoSaNEzAlobEWnWcX5WfCP9BoY6sE/view",
   };
 
 const newsletter = {
